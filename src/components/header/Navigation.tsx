@@ -40,7 +40,7 @@ export default function Navigation() {
                 </Link>
               </li>
               <li className="flex items-center">
-                <div className="border-s-2 px-2 flex">
+                <div className="border-s-2 px-2 flex ms-2">
                   <span className="cursor-pointer p-2">
                     <GitHubLogoIcon className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
                   </span>
