@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         primary: "#0e1630",
         secondary: "#01d293",
+        textPrimary: "#808dad",
       },
     },
     container: {
