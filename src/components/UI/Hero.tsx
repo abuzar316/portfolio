@@ -14,7 +14,7 @@ const Hero = () => {
           <p className="mb-5 text-xl text-textPrimary">Fullstack Developer </p>
           <p className="text-textPrimary">
             Hi there! My name is Mohammad Abuzar and I’m a software engineer
-            with over 5 years of experience in the industry. I love all things
+            with over 3 years of experience in the industry. I love all things
             tech and coding, I share my knowledge and experience with others.
           </p>
         </div>
