@@ -1,13 +1,13 @@
-import Footer from "@/components/header/Footer";
 import Hero from "@/components/UI/Hero";
 import ProjectsContainer from "@/components/UI/ProjectsContainer";
+import Skills from "@/components/UI/Skill";
 
 export default function Home() {
   return (
-    <main className="bg-primary text-white">
+    <main>
       <Hero />
       <ProjectsContainer />
-      <Footer />
+      <Skills />
     </main>
   );
 }
