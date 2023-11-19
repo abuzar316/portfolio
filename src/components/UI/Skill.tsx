@@ -1,4 +1,5 @@
 import SkillCard from "./SkillCard";
+import { skillsData } from "@/constants/constants";
 
 const Skills = () => {
   return (
@@ -8,7 +9,11 @@ const Skills = () => {
         Skills
       </h1>
       <p className="my-7 text-2xl">Checkout My Skill Set</p>
-      <SkillCard />
+      <div className="flex flex-wrap">
+        {skillsData.map((skill,index) => (
+          <SkillCard key={index} {...skill} />
+        ))}
+      </div>
     </div>
   );
 };

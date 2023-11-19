@@ -3,7 +3,7 @@ import heroImg from "../../../public/avtar.jpg";
 
 const Hero = () => {
   return (
-    <div className="md:container">
+    <div className="md:container py-10">
       <div className="grid grid-cols-2 grid-flow-col gap-4">
         <div className="py-16">
           <h1 className="text-secondary text-4xl">
@@ -19,8 +19,14 @@ const Hero = () => {
           </p>
         </div>
         <div className="flex items-center justify-end">
-          <div className="w-1/2 ">
-            <Image alt="Abuzar" className="rounded-full" src={heroImg} />
+          <div className="w-[70%]">
+            <Image
+              alt="Abuzar"
+              width={100}
+              height={100}
+              className="rounded-full w-[100%]"
+              src={`https://avatars.githubusercontent.com/u/84950162?v=4`}
+            />
           </div>
         </div>
       </div>
