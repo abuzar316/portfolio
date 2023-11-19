@@ -1,6 +1,5 @@
-import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 export default function Navigation() {
   return (
@@ -42,13 +41,13 @@ export default function Navigation() {
               <li className="flex items-center">
                 <div className="border-s-2 px-2 flex ms-2">
                   <span className="cursor-pointer p-2">
-                    <GitHubLogoIcon className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    <FaGithub className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
                   </span>
                   <span className="cursor-pointer p-2">
-                    <LinkedInLogoIcon className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    <FaLinkedinIn className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
                   </span>
                   <span className="cursor-pointer p-2">
-                    <InstagramLogoIcon className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    <FaInstagram className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
                   </span>
                 </div>
               </li>
