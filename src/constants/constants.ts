@@ -1,4 +1,4 @@
-import { skillCardPropsIF } from "../interface/skillInterface";
+import { projectCardProps, skillCardPropsIF } from "../interface/interface";
 
 import HTMLIcon from "../../public/images/html-icon.png";
 import GITIcon from "../../public/images/Git-Icon.png";
@@ -16,6 +16,8 @@ import MongoDBIcon from "../../public/images/mongodb-icon.png";
 import MySQLIcon from "../../public/images/mysql-icon.png";
 import SASSIcon from "../../public/images/sass-icon.webp";
 import TailwindIcon from "../../public/images/tailwind-icon.png";
+
+import VSCode from "../../public/vscode.png";
 
 export const skillsData: skillCardPropsIF[] = [
   { name: "HTML", icon: HTMLIcon },
@@ -35,4 +37,19 @@ export const skillsData: skillCardPropsIF[] = [
   { name: "MySQL", icon: MySQLIcon },
   { name: "GIT", icon: GITIcon },
   { name: "GITHUB", icon: GitHubIcon },
+];
+
+export const projectsList: projectCardProps[] = [
+  {
+    name: "VS Code Clone",
+    description: "Build VS Code Clone in React JS",
+    img: VSCode,
+    techStack: ["JS", "React JS", "Zustand"],
+  },
+  {
+    name: "VS Code Clone",
+    description: "Build VS Code Clone in React JS",
+    img: VSCode,
+    techStack: ["JS", "React JS", "Zustand"],
+  },
 ];

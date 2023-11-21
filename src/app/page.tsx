@@ -1,13 +1,13 @@
 import Hero from "@/components/UI/Hero";
 import ProjectsContainer from "@/components/UI/ProjectsContainer";
-import Skills from "@/components/UI/Skill";
+import SkillsContainer from "@/components/UI/SkillsContainer";
 
 export default function Home() {
   return (
     <main>
       <Hero />
       <ProjectsContainer />
-      <Skills />
+      <SkillsContainer />
     </main>
   );
 }

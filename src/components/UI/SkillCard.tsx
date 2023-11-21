@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { skillCardPropsIF } from "@/interface/skillInterface";
+import { skillCardPropsIF } from "@/interface/interface";
 
 const SkillCard = ({ name, icon }: skillCardPropsIF) => {
   return (
