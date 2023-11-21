@@ -1,3 +1,4 @@
+import { projectsList } from "@/constants/constants";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsContainer = () => {
@@ -8,7 +9,11 @@ const ProjectsContainer = () => {
         Projects
       </h1>
       <p className="my-7 text-2xl">Checkout My Interactive Projects</p>
-      <ProjectCard />
+      <div className="grid gap-4 xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-2">
+        {projectsList.map((project) => (
+          <ProjectCard {...project} />
+        ))}
+      </div>
     </div>
   );
 };
