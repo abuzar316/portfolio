@@ -1,7 +1,13 @@
+"use client";
 import Link from "next/link";
 import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { IoSunny } from "react-icons/io5";
+import ChangeDarkMode from "../UI/ChangeDarkMode";
+import useToggle from "@/hooks/useToggle";
 
 export default function Navigation() {
+  const [openMode, hanldeOpenMode] = useToggle();
+
   return (
     <div className="bg-primary text-white">
       <header className="md:container ">
@@ -12,7 +18,7 @@ export default function Navigation() {
               <span className="text-secondary">A</span>buzar
             </h2>
           </div>
-          <div>
+          <div className="relative">
             <ul className="flex">
               <li>
                 <Link
@@ -49,9 +55,13 @@ export default function Navigation() {
                   <span className="cursor-pointer p-2">
                     <FaInstagram className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
                   </span>
+                  <span className="cursor-pointer p-2" onClick={hanldeOpenMode}>
+                    <IoSunny className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                  </span>
                 </div>
               </li>
             </ul>
+            {openMode && <ChangeDarkMode />}
           </div>
         </nav>
       </header>
