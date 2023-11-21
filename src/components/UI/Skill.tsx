@@ -9,7 +9,7 @@ const Skills = () => {
         Skills
       </h1>
       <p className="my-7 text-2xl">Checkout My Skill Set</p>
-      <div className="flex flex-wrap">
+      <div className="grid gap-4 xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-2">
         {skillsData.map((skill,index) => (
           <SkillCard key={index} {...skill} />
         ))}
