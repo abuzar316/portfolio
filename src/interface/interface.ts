@@ -3,11 +3,11 @@ export interface skillCardPropsIF {
   icon: any;
 }
 
-
-
 export interface projectCardProps {
   name: string;
   description: string;
   img: any;
   techStack: string[];
 }
+
+export type useToggleType = [boolean, () => void];

@@ -18,7 +18,7 @@ const ProjectCard = ({
         <p className="text-textPrimary mt-2 mb-1 ">Tech Stack</p>
         <div>
           {techStack.map((stack) => (
-            <span className="me-2 rounded-lg bg-primaryLightOP px-3 py-1 inline-block hover:bg-white hover:text-black ease-in-out duration-300">
+            <span key={stack} className="me-2 rounded-lg bg-primaryLightOP px-3 py-1 inline-block hover:bg-white hover:text-black ease-in-out duration-300">
               {stack}
             </span>
           ))}

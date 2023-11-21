@@ -9,9 +9,9 @@ const ProjectsContainer = () => {
         Projects
       </h1>
       <p className="my-7 text-2xl">Checkout My Interactive Projects</p>
-      <div className="grid gap-4 xl:grid-cols-5 md:grid-cols-4 sm:grid-cols-2">
-        {projectsList.map((project) => (
-          <ProjectCard {...project} />
+      <div className="grid gap-4 md:grid-cols-3 sm:grid-cols-2">
+        {projectsList.map((project,index) => (
+          <ProjectCard {...project} key={index} />
         ))}
       </div>
     </div>
