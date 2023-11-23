@@ -4,12 +4,16 @@ import { PiMoonStarsFill } from "react-icons/pi";
 import { LuMonitor } from "react-icons/lu";
 import { themeMode } from "@/constants/constants";
 
-const ChangeDarkMode = ({ setTheme }: any) => {
+interface darkMode {
+  handleSetTheme: (value: string) => void;
+}
+
+const ChangeDarkMode = ({ handleSetTheme }: darkMode) => {
   return (
     <ul className="absolute right-0 bg-primaryLight w-[150px] rounded-lg py-2">
       <li
         className="cursor-pointer hover:bg-primaryLightOP flex items-center px-2 py-1"
-        onClick={() => setTheme(themeMode.light)}
+        onClick={() => handleSetTheme(themeMode.light)}
       >
         <span className="pe-2">
           <IoSunny />
@@ -18,7 +22,7 @@ const ChangeDarkMode = ({ setTheme }: any) => {
       </li>
       <li
         className="cursor-pointer hover:bg-primaryLightOP flex items-center px-2 py-1"
-        onClick={() => setTheme(themeMode.dark)}
+        onClick={() => handleSetTheme(themeMode.dark)}
       >
         <span className="pe-2">
           <PiMoonStarsFill />

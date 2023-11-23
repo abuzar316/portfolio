@@ -13,6 +13,11 @@ export default function Navigation() {
   const [openMode, hanldeOpenMode] = useToggle();
   const [theme, setTheme] = useDarkMode();
 
+  const handleSetTheme = (val: string) => {
+    hanldeOpenMode();
+    setTheme(val);
+  };
+
   const renderthemeIcon = () => {
     switch (theme) {
       case themeMode.dark:
@@ -85,7 +90,7 @@ export default function Navigation() {
             </ul>
             {openMode && (
               <ClickAwayListener clickAway={hanldeOpenMode}>
-                <ChangeDarkMode setTheme={setTheme} />
+                <ChangeDarkMode handleSetTheme={handleSetTheme} />
               </ClickAwayListener>
             )}
           </div>
