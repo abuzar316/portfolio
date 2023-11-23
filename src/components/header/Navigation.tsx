@@ -4,6 +4,7 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { IoSunny } from "react-icons/io5";
 import ChangeDarkMode from "../UI/ChangeDarkMode";
 import useToggle from "@/hooks/useToggle";
+import ClickAwayListener from "../utils/ClickAwayListener";
 
 export default function Navigation() {
   const [openMode, hanldeOpenMode] = useToggle();
@@ -61,7 +62,11 @@ export default function Navigation() {
                 </div>
               </li>
             </ul>
-            {openMode && <ChangeDarkMode />}
+            {openMode && (
+              <ClickAwayListener clickAway={hanldeOpenMode}>
+                <ChangeDarkMode />
+              </ClickAwayListener>
+            )}
           </div>
         </nav>
       </header>
