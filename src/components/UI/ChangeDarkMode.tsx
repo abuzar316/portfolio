@@ -1,4 +1,6 @@
 import { IoSunny } from "react-icons/io5";
+import { PiMoonStarsFill } from "react-icons/pi";
+import { LuMonitor } from "react-icons/lu";
 
 const ChangeDarkMode = () => {
   return (
@@ -7,19 +9,19 @@ const ChangeDarkMode = () => {
         <span className="pe-2">
           <IoSunny />
         </span>
-        Dark
+        Light
       </li>
       <li className="cursor-pointer hover:bg-primaryLightOP flex items-center px-2 py-1">
         <span className="pe-2">
-          <IoSunny />
+          <PiMoonStarsFill />
         </span>
         Dark
       </li>
       <li className="cursor-pointer hover:bg-primaryLightOP flex items-center px-2 py-1">
         <span className="pe-2">
-          <IoSunny />
+          <LuMonitor />
         </span>
-        Dark
+        System
       </li>
     </ul>
   );
