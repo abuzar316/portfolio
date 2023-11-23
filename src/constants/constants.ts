@@ -53,3 +53,9 @@ export const projectsList: projectCardProps[] = [
     techStack: ["JS", "React JS", "Zustand"],
   },
 ];
+
+export const themeMode = {
+  system: "system",
+  dark: "dark",
+  light: "light",
+};
