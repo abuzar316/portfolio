@@ -8,7 +8,7 @@ const ProjectCard = ({
   techStack,
 }: projectCardProps) => {
   return (
-    <div className="bg-primaryLight rounded-lg p-4 cursor-pointer hover:scale-105 ease-in-out duration-300">
+    <div className="dark:bg-primaryLight border-[1px] dark:border-0 rounded-lg p-4 cursor-pointer hover:scale-105 ease-in-out duration-300">
       <div>
         <Image className="rounded-lg" src={img} alt={name} />
       </div>
@@ -18,7 +18,10 @@ const ProjectCard = ({
         <p className="text-textPrimary mt-2 mb-1 ">Tech Stack</p>
         <div>
           {techStack.map((stack) => (
-            <span key={stack} className="me-2 rounded-lg bg-primaryLightOP px-3 py-1 inline-block hover:bg-white hover:text-black ease-in-out duration-300">
+            <span
+              key={stack}
+              className="me-2 rounded-lg border-[1px] dark:border-0 font-semibold hover:bg-black hover:text-white dark:bg-primaryLightOP dark:hover:text-black px-3 py-1 inline-block dark:hover:bg-white ease-in-out duration-300"
+            >
               {stack}
             </span>
           ))}

@@ -36,7 +36,7 @@ export default function Navigation() {
   };
 
   return (
-    <div className="bg-primary text-white">
+    <div className="bg-primary text-white sticky top-0 left-0 drop-shadow-2xl z-50 w-[100%]">
       <header className="md:container ">
         <nav className="flex justify-between items-center">
           <div>
