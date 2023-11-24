@@ -74,13 +74,22 @@ export default function Navigation() {
               <li className="flex items-center">
                 <div className="border-s-2 px-2 flex ms-2">
                   <span className="cursor-pointer p-2">
-                    <FaGithub className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    <Link href={"https://github.com/abuzar316"} target="_blank">
+                      <FaGithub className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    </Link>
                   </span>
                   <span className="cursor-pointer p-2">
-                    <FaLinkedinIn className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    <Link
+                      href={`https://www.linkedin.com/in/abuzar316/`}
+                      target="_blank"
+                    >
+                      <FaLinkedinIn className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    </Link>
                   </span>
                   <span className="cursor-pointer p-2">
-                    <FaInstagram className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    <Link href={`https://www.instagram.com/abuzar.one`} target="_blank">
+                      <FaInstagram className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
+                    </Link>
                   </span>
                   <span className="cursor-pointer p-2" onClick={hanldeOpenMode}>
                     {renderthemeIcon()}
