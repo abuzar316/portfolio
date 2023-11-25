@@ -33,26 +33,26 @@ const Footer = () => {
           <div className="mb-4">
             <input
               type="text"
-              className="w-full p-2 rounded bg-primaryLight "
+              className="w-full p-2 rounded border-[1px] dark:border-0 dark:bg-primaryLight "
               placeholder="Enter Your Name"
             />
           </div>
           <div className="mb-4">
             <input
               type="text"
-              className="w-full p-2 rounded bg-primaryLight "
+              className="w-full p-2 rounded border-[1px] dark:border-0 dark:bg-primaryLight "
               placeholder="Enter Your Email"
             />
           </div>
           <div className="mb-4">
             <textarea
               rows={4}
-              className="w-full p-2 rounded bg-primaryLight "
+              className="w-full p-2 rounded border-[1px] dark:border-0 dark:bg-primaryLight "
               placeholder="Enter Your Message"
             />
           </div>
           <div>
-            <button className="btn w-full text-center rounded bg-secondary text-white py-2 px-4 hover:bg-white hover:text-secondary ease-in-out duration-300">
+            <button className="btn w-full text-center rounded  bg-secondary text-white py-2 px-4 border-[1px] hover:border-secondary dark:border-secondary hover:bg-white hover:text-secondary dark:hover:bg-white dark:hover:text-secondary ease-in-out duration-300">
               Send Message
             </button>
           </div>

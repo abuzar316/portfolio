@@ -24,7 +24,7 @@ const Hero = () => {
               alt="Abuzar"
               width={100}
               height={100}
-              className="rounded-full w-[100%]"
+              className="rounded-full w-[100%] drop-shadow-2xl"
               src={`https://avatars.githubusercontent.com/u/84950162?v=4`}
             />
           </div>

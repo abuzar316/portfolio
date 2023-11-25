@@ -11,3 +11,4 @@ export interface projectCardProps {
 }
 
 export type useToggleType = [boolean, () => void];
+
