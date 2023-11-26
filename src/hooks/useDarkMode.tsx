@@ -24,7 +24,7 @@ const useDarkMode = () => {
     root.classList.add(themeCheck);
   }, [theme]);
 
-  return [theme, handleSetTheme];
+  return [theme, handleSetTheme] as const;
 };
 
 export default useDarkMode;
