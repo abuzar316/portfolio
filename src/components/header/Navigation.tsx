@@ -7,7 +7,7 @@ import ChangeDarkMode from "../UI/ChangeDarkMode";
 import useToggle from "@/hooks/useToggle";
 import ClickAwayListener from "../utils/ClickAwayListener";
 import useDarkMode from "@/hooks/useDarkMode";
-import { themeMode } from "@/constants/constants";
+import { navigationData, themeMode } from "@/constants/constants";
 
 export default function Navigation() {
   const [openMode, hanldeOpenMode] = useToggle();
@@ -47,30 +47,18 @@ export default function Navigation() {
           </div>
           <div className="relative">
             <ul className="flex">
-              <li>
-                <Link
-                  href={"#"}
-                  className="inline-block py-3 text-lg ease-in-out duration-300 px-2 hover:text-secondary cursor-pointer"
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={"#"}
-                  className="inline-block py-3 text-lg ease-in-out duration-300 px-2 hover:text-secondary cursor-pointer"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={"#"}
-                  className="inline-block py-3 text-lg ease-in-out duration-300 px-2 hover:text-secondary cursor-pointer"
-                >
-                  Contact
-                </Link>
-              </li>
+              {navigationData.map((nav) => {
+                return (
+                  <li key={nav.to}>
+                    <Link
+                      href={nav.to}
+                      className="inline-block py-3 text-lg ease-in-out duration-300 px-2 hover:text-secondary cursor-pointer"
+                    >
+                      {nav.title}
+                    </Link>
+                  </li>
+                );
+              })}
               <li className="flex items-center">
                 <div className="border-s-2 px-2 flex ms-2">
                   <span className="cursor-pointer p-2">
@@ -87,7 +75,10 @@ export default function Navigation() {
                     </Link>
                   </span>
                   <span className="cursor-pointer p-2">
-                    <Link href={`https://www.instagram.com/abuzar.one`} target="_blank">
+                    <Link
+                      href={`https://www.instagram.com/abuzar.one`}
+                      target="_blank"
+                    >
                       <FaInstagram className="ease-in-out duration-500 hover:text-secondary hover:scale-150" />
                     </Link>
                   </span>

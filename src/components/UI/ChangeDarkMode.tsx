@@ -5,7 +5,7 @@ import { LuMonitor } from "react-icons/lu";
 import { themeMode } from "@/constants/constants";
 
 interface darkMode {
-  handleSetTheme: (value: string) => void;
+  handleSetTheme: (val: string) => void;
 }
 
 const ChangeDarkMode = ({ handleSetTheme }: darkMode) => {
