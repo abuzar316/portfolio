@@ -52,14 +52,14 @@ export default function Navigation() {
                   <li key={nav.to}>
                     <Link
                       href={nav.to}
-                      className="inline-block py-3 text-lg ease-in-out duration-300 px-2 hover:text-secondary cursor-pointer"
+                      className="md:hidden lg:inline-block py-3 text-lg ease-in-out duration-300 px-2 hover:text-secondary cursor-pointer"
                     >
                       {nav.title}
                     </Link>
                   </li>
                 );
               })}
-              <li className="flex items-center">
+              <li className="md:hidden lg:flex items-center">
                 <div className="border-s-2 px-2 flex ms-2">
                   <span className="cursor-pointer p-2">
                     <Link href={"https://github.com/abuzar316"} target="_blank">
