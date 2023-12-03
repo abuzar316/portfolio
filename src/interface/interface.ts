@@ -12,3 +12,8 @@ export interface projectCardProps {
 
 export type useToggleType = [boolean, () => void];
 
+export interface darkModeTypes {
+  system: string;
+  dark: string;
+  light: string;
+}

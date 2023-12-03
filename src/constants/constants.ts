@@ -1,4 +1,8 @@
-import { projectCardProps, skillCardPropsIF } from "../interface/interface";
+import {
+  darkModeTypes,
+  projectCardProps,
+  skillCardPropsIF,
+} from "../interface/interface";
 
 import HTMLIcon from "../../public/images/html-icon.png";
 import GITIcon from "../../public/images/Git-Icon.png";
@@ -54,8 +58,23 @@ export const projectsList: projectCardProps[] = [
   },
 ];
 
-export const themeMode = {
+export const themeMode: darkModeTypes = {
   system: "system",
   dark: "dark",
   light: "light",
 };
+
+export const navigationData = [
+  {
+    title: "Home",
+    to: "/",
+  },
+  {
+    title: "Skills",
+    to: "/skills",
+  },
+  {
+    title: "Projects",
+    to: "/projects",
+  },
+];
