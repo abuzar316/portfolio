@@ -1,5 +1,4 @@
 import Image from "next/image";
-import heroImg from "../../../public/avtar.jpg";
 
 const Hero = () => {
   return (
@@ -24,7 +23,7 @@ const Hero = () => {
               alt="Abuzar"
               width={100}
               height={100}
-              className="rounded-full w-[100%] drop-shadow-2xl"
+              className="rounded-full w-[100%] drop-shadow-2xl border-4 border-secondary"
               src={`https://avatars.githubusercontent.com/u/84950162?v=4`}
             />
           </div>
