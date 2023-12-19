@@ -3,8 +3,8 @@ import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div className="md:container">
-      <div className="grid grid-cols-2 grid-flow-col gap-4 py-16">
+    <div className="container">
+      <div className="grid md:grid-cols-2 gap-4 py-16">
         <div className="">
           <h4 className="text-3xl my-5">Connect with me</h4>
           <div className="flex items-center mb-5">
@@ -17,7 +17,7 @@ const Footer = () => {
             <span className="me-3">
               <MdAttachEmail className="text-secondary text-xl" />
             </span>
-            <p className=" text-xl text-textPrimary hover:text-secondary">
+            <p className=" text-xl sm:text-sm text-textPrimary hover:text-secondary">
               mohammadabuzar316@gmail.com
             </p>
           </div>

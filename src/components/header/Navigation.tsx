@@ -37,7 +37,7 @@ export default function Navigation() {
 
   return (
     <div className="bg-primary text-white sticky top-0 left-0 drop-shadow-2xl z-50 w-[100%]">
-      <header className="md:container ">
+      <header className="container">
         <nav className="flex justify-between items-center">
           <div>
             <h2 className="text-2xl">
@@ -52,14 +52,14 @@ export default function Navigation() {
                   <li key={nav.to}>
                     <Link
                       href={nav.to}
-                      className="md:hidden lg:inline-block py-3 text-lg ease-in-out duration-300 px-2 hover:text-secondary cursor-pointer"
+                      className="hidden md:inline-block py-3 text-lg ease-in-out duration-300 px-2 hover:text-secondary cursor-pointer"
                     >
                       {nav.title}
                     </Link>
                   </li>
                 );
               })}
-              <li className="md:hidden lg:flex items-center">
+              <li className="hidden md:flex items-center">
                 <div className="border-s-2 px-2 flex ms-2">
                   <span className="cursor-pointer p-2">
                     <Link href={"https://github.com/abuzar316"} target="_blank">
