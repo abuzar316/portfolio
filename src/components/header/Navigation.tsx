@@ -8,6 +8,7 @@ import useToggle from "@/hooks/useToggle";
 import ClickAwayListener from "../utils/ClickAwayListener";
 import useDarkMode from "@/hooks/useDarkMode";
 import { navigationData, themeMode } from "@/constants/constants";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 export default function Navigation() {
   const [openMode, hanldeOpenMode] = useToggle();
@@ -42,10 +43,13 @@ export default function Navigation() {
           <div>
             <h2 className="text-2xl">
               <span className="text-secondary">M</span>ohammad{" "}
-              <span className="text-secondary">A</span>buzar
+              <span className="text-secondary ">A</span>buzar
             </h2>
           </div>
           <div className="relative">
+            <span className="sm:block md:hidden text-xl py-3">
+              <RxHamburgerMenu />
+            </span>
             <ul className="flex">
               {navigationData.map((nav) => {
                 return (
