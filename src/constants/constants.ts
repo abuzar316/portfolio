@@ -23,23 +23,72 @@ import TailwindIcon from "../../public/images/tailwind-icon.png";
 
 import VSCode from "../../public/vscode.png";
 
+const skillsContants = {
+  all: "All",
+  Frontend: "Frontend",
+  Backend: "Backend",
+  Library: "Library",
+  Framework: "Framework",
+  Database: "Database",
+  Tools: "Tools",
+  programming: "Programming Languages",
+};
+
+export const skillsCategory = Object.values(skillsContants);
+
 export const skillsData: skillCardPropsIF[] = [
-  { name: "HTML", icon: HTMLIcon },
-  { name: "CSS", icon: CSSIcon },
-  { name: "SASS", icon: SASSIcon },
-  { name: "JavaScrpt", icon: JSIcon },
-  { name: "TypeScript", icon: TSIcon },
-  { name: "React", icon: ReactIcon },
-  { name: "Zustand", icon: HTMLIcon },
-  { name: "Redux", icon: ReduxIcon },
-  { name: "Material UI", icon: MaterialIcon },
-  { name: "Bootstrap", icon: BootstapIcon },
-  { name: "Tailwind CSS", icon: TailwindIcon },
-  { name: "Node", icon: NodeIcon },
-  { name: "Express", icon: ExpressIcon },
-  { name: "MongoDB", icon: MongoDBIcon },
-  { name: "MySQL", icon: MySQLIcon },
-  { name: "GIT", icon: GITIcon },
+  { name: "HTML", icon: HTMLIcon, category: [skillsContants.Frontend] },
+  { name: "CSS", icon: CSSIcon, category: [skillsContants.Frontend] },
+  { name: "SASS", icon: SASSIcon, category: [skillsContants.Frontend] },
+  {
+    name: "JavaScrpt",
+    icon: JSIcon,
+    category: [
+      skillsContants.Frontend,
+      skillsContants.Backend,
+      skillsContants.programming,
+    ],
+  },
+  {
+    name: "TypeScript",
+    icon: TSIcon,
+    category: [
+      skillsContants.Frontend,
+      skillsContants.programming,
+      skillsContants.Backend,
+    ],
+  },
+  {
+    name: "React",
+    icon: ReactIcon,
+    category: [skillsContants.Library],
+  },
+  {
+    name: "Zustand",
+    icon: HTMLIcon,
+    category: [skillsContants.Library],
+  },
+  { name: "Redux", icon: ReduxIcon, category: [skillsContants.Library] },
+  {
+    name: "Material UI",
+    icon: MaterialIcon,
+    category: [skillsContants.Library],
+  },
+  {
+    name: "Bootstrap",
+    icon: BootstapIcon,
+    category: [skillsContants.Framework],
+  },
+  {
+    name: "Tailwind CSS",
+    icon: TailwindIcon,
+    category: [skillsContants.Framework],
+  },
+  { name: "Node", icon: NodeIcon, category: [skillsContants.Frontend] },
+  { name: "Express", icon: ExpressIcon, category: [skillsContants.Frontend] },
+  { name: "MongoDB", icon: MongoDBIcon, category: [skillsContants.Frontend] },
+  { name: "MySQL", icon: MySQLIcon, category: [skillsContants.Frontend] },
+  { name: "GIT", icon: GITIcon, category: [skillsContants.Frontend] },
   { name: "GITHUB", icon: GitHubIcon },
 ];
 

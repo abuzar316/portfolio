@@ -1,6 +1,7 @@
 export interface skillCardPropsIF {
   name: string;
   icon: any;
+  category?: string[];
 }
 
 export interface projectCardProps {
@@ -21,4 +22,9 @@ export interface darkModeTypes {
 export interface offCanvasProps {
   opanOffCanvas: boolean;
   hanldeOffCanvas: () => void;
+}
+
+export interface bugdeProps {
+  title: string;
+  active?: boolean;
 }

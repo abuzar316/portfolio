@@ -1,7 +1,14 @@
+"use client";
+import { usePathname } from "next/navigation";
+import Bugde from "./Bugde";
 import SkillCard from "./SkillCard";
-import { skillsData } from "@/constants/constants";
+import { skillsCategory, skillsData } from "@/constants/constants";
 
 const SkillsContainer = () => {
+  const pathName = usePathname();
+
+  console.log("router", pathName);
+
   return (
     <div id="skills" className="container py-5">
       <h1 className="text-secondary text-4xl">
@@ -9,8 +16,12 @@ const SkillsContainer = () => {
         Skills
       </h1>
       <p className="my-7 text-2xl">Checkout My Skill Set</p>
+      <div className="mb-4">
+        {pathName === "/skills" &&
+          skillsCategory.map((item) => <Bugde key={item} title={item} />)}
+      </div>
       <div className="grid gap-4 xl:grid-cols-4 md:grid-cols-4 sm:grid-cols-2">
-        {skillsData.map((skill,index) => (
+        {skillsData.map((skill, index) => (
           <SkillCard key={index} {...skill} />
         ))}
       </div>
