@@ -20,6 +20,7 @@ const config: Config = {
         primaryLightOP: "#808dad68",
         secondary: "#01d293",
         textPrimary: "#808dad",
+        offCanvas: "rgba(0,0,0,0.54)"
       },
     },
     container: {

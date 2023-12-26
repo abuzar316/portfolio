@@ -9,9 +9,11 @@ import ClickAwayListener from "../utils/ClickAwayListener";
 import useDarkMode from "@/hooks/useDarkMode";
 import { navigationData, themeMode } from "@/constants/constants";
 import { RxHamburgerMenu } from "react-icons/rx";
+import OffCanvas from "../UI/OffCanvas";
 
 export default function Navigation() {
   const [openMode, hanldeOpenMode] = useToggle();
+  const [opanOffCanvas, hanldeOffCanvas] = useToggle();
   const [theme, setTheme] = useDarkMode();
 
   const handleSetTheme = (val: string) => {
@@ -38,6 +40,10 @@ export default function Navigation() {
 
   return (
     <div className="bg-primary text-white sticky top-0 left-0 drop-shadow-2xl z-50 w-[100%]">
+      <OffCanvas
+        opanOffCanvas={opanOffCanvas}
+        hanldeOffCanvas={hanldeOffCanvas}
+      ></OffCanvas>
       <header className="container">
         <nav className="flex justify-between items-center">
           <div>
@@ -47,7 +53,10 @@ export default function Navigation() {
             </h2>
           </div>
           <div className="relative">
-            <span className="sm:block md:hidden text-xl py-3">
+            <span
+              onClick={hanldeOffCanvas}
+              className="block md:hidden text-xl py-3 cursor-pointer"
+            >
               <RxHamburgerMenu />
             </span>
             <ul className="flex">
