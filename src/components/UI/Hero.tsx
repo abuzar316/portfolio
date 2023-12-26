@@ -2,9 +2,9 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="md:container py-10">
-      <div className="grid grid-cols-2 grid-flow-col gap-4">
-        <div className="py-16">
+    <div className="container py-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 flex-col-reverse">
+        <div className="py-16 order-2 md:order-1">
           <h1 className="text-secondary text-4xl">
             <span className="inline-block w-5 h-0.5 bg-secondary relative me-1 bottom-3"></span>{" "}
             Hello
@@ -17,7 +17,7 @@ const Hero = () => {
             tech and coding, I share my knowledge and experience with others.
           </p>
         </div>
-        <div className="flex items-center justify-end">
+        <div className="order-1 md:order-2 flex items-center justify-center md:justify-end">
           <div className="w-[70%]">
             <Image
               alt="Abuzar"

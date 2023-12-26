@@ -24,6 +24,7 @@ const config: Config = {
     },
     container: {
       center: true,
+      padding: '2rem',
       screens: {
         sm: "100%",
         md: "728px",
