@@ -17,3 +17,8 @@ export interface darkModeTypes {
   dark: string;
   light: string;
 }
+
+export interface offCanvasProps {
+  opanOffCanvas: boolean;
+  hanldeOffCanvas: () => void;
+}
