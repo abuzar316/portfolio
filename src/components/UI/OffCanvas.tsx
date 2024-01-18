@@ -85,8 +85,8 @@ const OffCanvas = (props: offCanvasProps) => {
         </ul>
       </div>
       <div
-        className={`w-[40%] fixed top-0 ${
-          opanOffCanvas ? "left-[60%]" : "left-[-60%]"
+        className={`fixed top-0 ${
+          opanOffCanvas ? "left-[60%] w-[40%]" : "left-[100%] w-[0%]"
         } h-[100vh] bg-offCanvas ease-in-out duration-500 z-10`}
         onClick={hanldeOffCanvas}
       ></div>

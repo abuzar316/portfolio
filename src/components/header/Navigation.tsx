@@ -48,6 +48,7 @@ export default function Navigation() {
         <nav className="flex justify-between items-center">
           <div>
             <h2 className="text-2xl">
+              {"</>"}
               <span className="text-secondary">M</span>ohammad{" "}
               <span className="text-secondary ">A</span>buzar
             </h2>
