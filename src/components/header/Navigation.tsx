@@ -10,6 +10,7 @@ import useDarkMode from "@/hooks/useDarkMode";
 import { navigationData, themeMode } from "@/constants/constants";
 import { RxHamburgerMenu } from "react-icons/rx";
 import OffCanvas from "../UI/OffCanvas";
+import { FaCode } from "react-icons/fa";
 
 export default function Navigation() {
   const [openMode, hanldeOpenMode] = useToggle();
@@ -47,9 +48,9 @@ export default function Navigation() {
       <header className="container">
         <nav className="flex justify-between items-center">
           <div>
-            <h2 className="text-2xl">
-              {"</>"}
-              <span className="text-secondary">M</span>ohammad{" "}
+            <h2 className="text-2xl flex items-center">
+              <FaCode />
+              <span className="text-secondary ms-1">M</span>ohammad{" "}
               <span className="text-secondary ">A</span>buzar
             </h2>
           </div>
