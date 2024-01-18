@@ -3,11 +3,20 @@ import { usePathname } from "next/navigation";
 import Bugde from "./Bugde";
 import SkillCard from "./SkillCard";
 import { skillsCategory, skillsData } from "@/constants/constants";
+import { useMemo, useState } from "react";
 
 const SkillsContainer = () => {
   const pathName = usePathname();
+  const [avtiveBugde, setActiveBugde] = useState<string>("All");
 
-  console.log("router", pathName);
+  const handleActiveBugde = (name: string) => () => setActiveBugde(name);
+
+  const skillsDataFill = useMemo(() => {
+    return avtiveBugde === "All"
+      ? skillsData
+      : skillsData.filter((skill) => skill.category?.includes(avtiveBugde));
+  }, [avtiveBugde]);
+
 
   return (
     <div id="skills" className="container py-5">
@@ -18,10 +27,17 @@ const SkillsContainer = () => {
       <p className="my-7 text-2xl">Checkout My Skill Set</p>
       <div className="mb-4">
         {pathName === "/skills" &&
-          skillsCategory.map((item) => <Bugde key={item} title={item} />)}
+          skillsCategory.map((item) => (
+            <Bugde
+              key={item}
+              title={item}
+              active={avtiveBugde === item}
+              onClick={handleActiveBugde(item)}
+            />
+          ))}
       </div>
       <div className="grid gap-4 xl:grid-cols-4 md:grid-cols-4 sm:grid-cols-2">
-        {skillsData.map((skill, index) => (
+        {skillsDataFill.map((skill, index) => (
           <SkillCard key={index} {...skill} />
         ))}
       </div>

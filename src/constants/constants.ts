@@ -61,35 +61,43 @@ export const skillsData: skillCardPropsIF[] = [
   {
     name: "React",
     icon: ReactIcon,
-    category: [skillsContants.Library],
+    category: [skillsContants.Library, skillsContants.Frontend],
   },
   {
     name: "Zustand",
     icon: HTMLIcon,
-    category: [skillsContants.Library],
+    category: [skillsContants.Library, skillsContants.Frontend],
   },
-  { name: "Redux", icon: ReduxIcon, category: [skillsContants.Library] },
+  {
+    name: "Redux",
+    icon: ReduxIcon,
+    category: [skillsContants.Library, skillsContants.Frontend],
+  },
   {
     name: "Material UI",
     icon: MaterialIcon,
-    category: [skillsContants.Library],
+    category: [skillsContants.Library, skillsContants.Frontend],
   },
   {
     name: "Bootstrap",
     icon: BootstapIcon,
-    category: [skillsContants.Framework],
+    category: [skillsContants.Framework, skillsContants.Frontend],
   },
   {
     name: "Tailwind CSS",
     icon: TailwindIcon,
-    category: [skillsContants.Framework],
+    category: [skillsContants.Framework, skillsContants.Frontend],
   },
-  { name: "Node", icon: NodeIcon, category: [skillsContants.Frontend] },
-  { name: "Express", icon: ExpressIcon, category: [skillsContants.Frontend] },
-  { name: "MongoDB", icon: MongoDBIcon, category: [skillsContants.Frontend] },
-  { name: "MySQL", icon: MySQLIcon, category: [skillsContants.Frontend] },
-  { name: "GIT", icon: GITIcon, category: [skillsContants.Frontend] },
-  { name: "GITHUB", icon: GitHubIcon },
+  { name: "Node", icon: NodeIcon, category: [skillsContants.Backend] },
+  {
+    name: "Express",
+    icon: ExpressIcon,
+    category: [skillsContants.Backend, skillsContants.Framework],
+  },
+  { name: "MongoDB", icon: MongoDBIcon, category: [skillsContants.Database] },
+  { name: "MySQL", icon: MySQLIcon, category: [skillsContants.Database] },
+  { name: "GIT", icon: GITIcon, category: [skillsContants.Tools] },
+  { name: "GITHUB", icon: GitHubIcon, category: [skillsContants.Tools] },
 ];
 
 export const projectsList: projectCardProps[] = [

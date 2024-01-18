@@ -27,4 +27,5 @@ export interface offCanvasProps {
 export interface bugdeProps {
   title: string;
   active?: boolean;
+  onClick?: () => void;
 }
